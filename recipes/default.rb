@@ -1,5 +1,11 @@
 # libxml-ruby gem for BioRuby
-package "libxml2-dev"
+case node.platform
+when 'ubuntu', 'debian'
+  package "libxml2-dev"
+when 'centos'
+  package "libxml2-devel"
+end
+
 execute "install BioRuby" do
   user "vagrant"
   group "vagrant"
