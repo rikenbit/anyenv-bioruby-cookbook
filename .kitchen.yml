@@ -4,9 +4,14 @@ driver:
 
 provisioner:
   name: chef_solo
+  chef_omnibus_install_options: ' -d /tmp/vagrant-cache/vagrant_omnibus'
+
 
 platforms:
   - name: ubuntu-12.04
+    driver:
+      vagrantfile_erb: Vagrantfile.erb
+
 
 suites:
   - name: default
