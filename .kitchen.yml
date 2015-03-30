@@ -14,7 +14,7 @@ platforms:
 
 
 suites:
-  - name: default
+  - name: anyenv-bioruby-cookbook
     run_list:
       - recipe[ubuntu-change-source-list]
       - recipe[timezone-ii]
